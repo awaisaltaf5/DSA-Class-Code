@@ -1,8 +1,10 @@
 
 
-# 🚀 DSA in C++ - From Zero to Advanced 🔥  
+---
 
-Welcome to the **DSA in C++** repository! This repository is a **comprehensive** guide to **Data Structures and Algorithms (DSA) in C++**, covering everything from **fundamentals** to **advanced topics** with well-structured code, explanations, and problem-solving approaches.
+# 🚀 DSA in C++ - Class Code (From Zero to Advanced) 🔥  
+
+Welcome to the **DSA in C++ - Class Code** repository! This repository is a **comprehensive** guide to **Data Structures and Algorithms (DSA) in C++**, covering everything from **fundamentals** to **advanced topics** with well-structured code, explanations, and problem-solving approaches.
 
 ---
 
@@ -29,7 +31,7 @@ Welcome to the **DSA in C++** repository! This repository is a **comprehensive**
 ## 📂 Repository Structure  
 
 ```
-📦 DSA-in-C++
+📦 DSA-Class-Code
 ├── 🔰 Basics/                # C++ Basics, STL, Time Complexity
 ├── 📊 Sorting_Searching/     # Bubble Sort, Merge Sort, Quick Sort, Binary Search, etc.
 ├── 🔁 Recursion_Backtracking/ # Recursion, Backtracking problems
@@ -49,7 +51,8 @@ Welcome to the **DSA in C++** repository! This repository is a **comprehensive**
 
 1️⃣ **Clone the Repository**  
 ```sh
-git clone https://github.com/awaisaltaf5/DSA-Class-Code
+git clone https://github.com/awaisaltaf5/DSA-Class-Code.git
+cd DSA-Class-Code
 ```
 
 2️⃣ **Start Learning & Coding**  
@@ -95,4 +98,3 @@ git clone https://github.com/awaisaltaf5/DSA-Class-Code
 ### ⭐ **Star this repo if you found it useful!** 🚀
 
 ---
-
