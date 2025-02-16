@@ -6,7 +6,11 @@ int main() {
     int arr[5] = {2, 3, 1, 4, 5};
 
     // Selection Sort Algorithm (Sorting in Ascending Order)
-    // Outer loop runs from 0 to length-2 (as last element gets sorted automatically)
+    // Selection Sort is a simple sorting algorithm that works by repeatedly selecting
+    // the smallest (or largest) element from the unsorted part and moving it to the correct position.
+    // It has a time complexity of O(n^2) in all cases, which makes it inefficient for large datasets.
+    
+    // Outer loop runs from 0 to length-2 (as the last element gets sorted automatically)
     for (int i = 0; i < length - 1; i++) {
         // Inner loop to find the minimum element in the unsorted part
         for (int j = i + 1; j < length; j++) {
@@ -18,6 +22,7 @@ int main() {
     }
 
     // Printing the sorted array
+    cout << "Sorted Array: ";
     for (int i = 0; i < length; i++) {
         cout << arr[i] << " ";
     }
@@ -26,8 +31,21 @@ int main() {
 }
 
 /* 
-    Dry Run of the Selection Sort Algorithm:
+    Explanation of Selection Sort:
     
+    - Selection Sort is an in-place sorting algorithm, meaning it does not require extra memory.
+    - It works by dividing the array into two parts: sorted and unsorted.
+    - In each iteration, it finds the smallest element from the unsorted part and places it in the sorted part.
+    - The process continues until all elements are sorted.
+
+    Why do we use Selection Sort?
+    - It is simple and easy to implement.
+    - It is useful when working with small datasets.
+    - It performs well when the cost of swapping elements is low.
+    - Unlike Bubble Sort, it minimizes the number of swaps.
+
+    Dry Run of Selection Sort:
+
     Initial array: {2, 3, 1, 4, 5}
     
     Step 1: i = 0
@@ -53,4 +71,11 @@ int main() {
     Array after step 4: {1, 2, 3, 4, 5}
 
     Final sorted array: {1, 2, 3, 4, 5}
+
+    Time Complexity:
+    - Best Case: O(n^2) (Even if the array is already sorted)
+    - Worst Case: O(n^2) (When elements are in reverse order)
+    - Average Case: O(n^2)
+
+    Space Complexity: O(1) (Since sorting is done in place)
 */
