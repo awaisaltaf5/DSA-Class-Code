@@ -75,4 +75,5 @@ Now, the array looks like `{1, 4, 4, 5, 6, 7}`. The space at index 2 is ready to
 - The final array after insertion is: `{1, 4, 2, 5, 6, 7}`.
 
 ### Final Output:
+*/
 
