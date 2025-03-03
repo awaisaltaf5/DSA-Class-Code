@@ -66,4 +66,54 @@ int main() {
 ✅ Comparison with Linear Search:
 - **Linear Search:** O(n), checks elements one by one.
 - **Binary Search:** O(log n), eliminates half of the search space each time.
+
+---
+
+### 📝 Dry Run of the Binary Search:
+
+Let’s walk through a dry run of the binary search with the array `{1, 2, 3, 4, 5}` and search for element `4`.
+
+#### 1st Iteration:
+- `start = 0`, `end = 4`
+- `mid = (0 + 4) / 2 = 2`
+- `arr[mid] = arr[2] = 3`
+- Since `arr[mid] < element`, the search continues in the right half.
+- Update: `start = mid + 1 = 3`
+
+#### 2nd Iteration:
+- `start = 3`, `end = 4`
+- `mid = (3 + 4) / 2 = 3`
+- `arr[mid] = arr[3] = 4`
+- `arr[mid] == element`, element found at index `3`.
+
+**Result**: The element `4` is found at index `3`.
+
+---
+
+Let’s walk through a dry run with the element `6` (which is not present in the array).
+
+#### 1st Iteration:
+- `start = 0`, `end = 4`
+- `mid = (0 + 4) / 2 = 2`
+- `arr[mid] = arr[2] = 3`
+- Since `arr[mid] < element`, the search continues in the right half.
+- Update: `start = mid + 1 = 3`
+
+#### 2nd Iteration:
+- `start = 3`, `end = 4`
+- `mid = (3 + 4) / 2 = 3`
+- `arr[mid] = arr[3] = 4`
+- Since `arr[mid] < element`, the search continues in the right half.
+- Update: `start = mid + 1 = 4`
+
+#### 3rd Iteration:
+- `start = 4`, `end = 4`
+- `mid = (4 + 4) / 2 = 4`
+- `arr[mid] = arr[4] = 5`
+- Since `arr[mid] < element`, the search continues in the right half.
+- Update: `start = mid + 1 = 5`
+
+At this point, `start = 5` and `end = 4`, so the loop ends and the element `6` is not found.
+
+**Result**: The element `6` is not present in the array.
 */
