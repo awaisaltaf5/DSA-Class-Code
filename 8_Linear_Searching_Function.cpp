@@ -27,7 +27,7 @@ int main() {
     // Call the linear search function and store the result
     int result = linear_Searching(arr, element, length);
 
-    // Display the result based on whether the element is found or not
+// Display the result based on whether the element is found or not
     if (result != -1) {
         cout << "Element is Found at " << result << " Index!"; // Print the index if found
     } else {
@@ -36,3 +36,27 @@ int main() {
 
     return 0; // Return 0 to indicate successful execution
 }
+// Dry run for linear search
+    // Let's say the input element is 4:
+    // 1. Start the loop at i = 0:
+    //    arr[0] = 1, check if 1 == 4 (no), continue to the next index.
+    // 2. Now, i = 1:
+    //    arr[1] = 2, check if 2 == 4 (no), continue to the next index.
+    // 3. Now, i = 2:
+    //    arr[2] = 3, check if 3 == 4 (no), continue to the next index.
+    // 4. Now, i = 3:
+    //    arr[3] = 4, check if 4 == 4 (yes), return index 3.
+    //    Element is found at index 3.
+
+    // Another example: If the element is 6:
+    // 1. Start the loop at i = 0:
+    //    arr[0] = 1, check if 1 == 6 (no), continue to the next index.
+    // 2. Now, i = 1:
+    //    arr[1] = 2, check if 2 == 6 (no), continue to the next index.
+    // 3. Now, i = 2:
+    //    arr[2] = 3, check if 3 == 6 (no), continue to the next index.
+    // 4. Now, i = 3:
+    //    arr[3] = 4, check if 4 == 6 (no), continue to the next index.
+    // 5. Now, i = 4:
+    //    arr[4] = 5, check if 5 == 6 (no), exit the loop.
+    //    Since we have reached the end of the array and the element was not found, return -1.
