@@ -1,13 +1,25 @@
+/*
+Stack Implementation in C++
+ A stack is a linear data structure that follows the LIFO (Last In, First Out) principle.
+ In this implementation, we use an array to store elements and a 'top' variable to track the topmost element.
+ - `Push`: Adds an element to the top of the stack.
+ - `Pop`: Removes the top element from the stack.
+ - `Top`: Retrieves the top element without removing it.
+ - `IsEmpty`: Checks if the stack is empty.
+ - `IsFull`: Checks if the stack is full.
+ */
+
 #include <iostream>
 using namespace std;
 
 // Template class for Stack, allowing it to store any data type
-template<class ItemType>
-class StackType {
+template <class ItemType>
+class StackType
+{
 public:
     // Constructor to initialize the stack with a given size
     StackType(int size);
-    
+
     // Destructor to free allocated memory
     ~StackType();
 
@@ -27,62 +39,76 @@ public:
     void Pop();
 
 private:
-    int top;        // Index of the top element in the stack
-    int maxStack;   // Maximum size of the stack
-    ItemType* items; // Pointer to dynamically allocated array for stack storage
+    int top;         // Index of the top element in the stack
+    int maxStack;    // Maximum size of the stack
+    ItemType *items; // Pointer to dynamically allocated array for stack storage
 };
 
 // Constructor: Initializes the stack with a given size
-template<class ItemType>
-StackType<ItemType>::StackType(int size) {
-    top = -1;            // Stack is initially empty
-    maxStack = size;     // Set the maximum size of the stack
+template <class ItemType>
+StackType<ItemType>::StackType(int size)
+{
+    top = -1;                       // Stack is initially empty
+    maxStack = size;                // Set the maximum size of the stack
     items = new ItemType[maxStack]; // Dynamically allocate memory for stack elements
 }
 
 // Destructor: Frees dynamically allocated memory when the object is destroyed
-template<class ItemType>
-StackType<ItemType>::~StackType() {
-    delete[] items;  // Free the allocated memory
+template <class ItemType>
+StackType<ItemType>::~StackType()
+{
+    delete[] items; // Free the allocated memory
 }
 
 // Function to check if the stack is empty
-template<class ItemType>
-bool StackType<ItemType>::IsEmpty() const {
-    return (top == -1);  // If top is -1, the stack is empty
+template <class ItemType>
+bool StackType<ItemType>::IsEmpty() const
+{
+    return (top == -1); // If top is -1, the stack is empty
 }
 
 // Function to check if the stack is full
-template<class ItemType>
-bool StackType<ItemType>::IsFull() const {
-    return (top == maxStack - 1);  // If top reaches maxStack-1, stack is full
+template <class ItemType>
+bool StackType<ItemType>::IsFull() const
+{
+    return (top == maxStack - 1); // If top reaches maxStack-1, stack is full
 }
 
 // Function to push (insert) an element into the stack
-template<class ItemType>
-void StackType<ItemType>::Push(ItemType newItem) {
-    if (IsFull()) {
+template <class ItemType>
+void StackType<ItemType>::Push(ItemType newItem)
+{
+    if (IsFull())
+    {
         cout << "Stack Overflow! Cannot push " << newItem << endl;
-    } else {
-        top++;             // Move top to the next index
+    }
+    else
+    {
+        top++;                // Move top to the next index
         items[top] = newItem; // Insert the new element at the top
     }
 }
 
 // Function to pop (remove) an element from the stack
-template<class ItemType>
-void StackType<ItemType>::Pop() {
-    if (IsEmpty()) {
+template <class ItemType>
+void StackType<ItemType>::Pop()
+{
+    if (IsEmpty())
+    {
         cout << "Stack Underflow! Cannot pop from an empty stack." << endl;
-    } else {
-        top--;  // Simply decrement top to remove the top element
+    }
+    else
+    {
+        top--; // Simply decrement top to remove the top element
     }
 }
 
 // Function to get the top element of the stack without removing it
-template<class ItemType>
-ItemType StackType<ItemType>::Top() const {
-    if (IsEmpty()) {
+template <class ItemType>
+ItemType StackType<ItemType>::Top() const
+{
+    if (IsEmpty())
+    {
         cout << "Stack is empty! No top element." << endl;
         exit(1); // Exit program if no top element exists
     }
@@ -90,7 +116,8 @@ ItemType StackType<ItemType>::Top() const {
 }
 
 // Main function to demonstrate stack operations
-int main() {
+int main()
+{
     StackType<int> stack(5); // Create a stack of size 5
 
     // Pushing elements into stack
