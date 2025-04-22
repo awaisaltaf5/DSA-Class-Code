@@ -44,7 +44,7 @@ private:
     ItemType *items; // Pointer to dynamically allocated array for stack storage
 };
 
-// Constructor: Initializes the stack with a given size
+// Constructor: Initializes the stack with a given size 
 template <class ItemType>
 StackType<ItemType>::StackType(int size)
 {
