@@ -24,7 +24,7 @@ void insertBeg(int data) {
     head = newNode;  // Update head to point to the new node
     count++;  // Increment count of nodes
 }
-
+ 
 /**
  * Function to display the linked list and the count of nodes
  */
